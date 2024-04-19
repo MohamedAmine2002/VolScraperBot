@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 class Booking (webdriver.Chrome): 
-    def __init__(self, driver_path="C:/Users/HIZEM/Desktop/PCD/VolScraperBot/chromedriver.exe") :
+    def __init__(self, driver_path="C:/Users/medamine/VolScraperBot/chromedriver.exe") :
         opts = webdriver.ChromeOptions()
         opts.add_argument("--headless") 
         self.driver_path = driver_path

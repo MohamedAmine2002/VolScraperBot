@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 
 class Booking (webdriver.Chrome): 
-    def __init__(self, driver_path="C:/Users/HIZEM/Desktop/PCD/VolScraperBot/chromedriver.exe") :
+    def __init__(self, driver_path="C:/Users/medamine/VolScraperBot/chromedriver.exe") :
         opts = webdriver.ChromeOptions()
         opts.add_argument("--headless") 
         self.driver_path = driver_path
@@ -37,7 +37,7 @@ class Booking (webdriver.Chrome):
         self.implicitly_wait(60)
         if place_of_departure == 'TUN':
             arrival_places = {'ORY': 15, 'ROM': 12, 'NAP': 10, 'MLA': 9, 'PMO': 11, 'CZL': 14, 'MJI': 13}
-            i= arrival_places.get(place_of_arrival, 15) 
+            i= arrival_places.get(place_of_arrival) 
         else :
             i = 2
         country_of_arrival = WebDriverWait(self,10).until(
